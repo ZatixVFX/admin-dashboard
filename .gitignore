@@ -7,7 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-vercel.json
+/vercel.json
 
 # Node Modules
 frontend/node_modules
