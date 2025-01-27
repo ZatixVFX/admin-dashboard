@@ -9,7 +9,7 @@
     "dev": "concurrently \"npm run server\" \"npm run start\"",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview --port 3004"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
