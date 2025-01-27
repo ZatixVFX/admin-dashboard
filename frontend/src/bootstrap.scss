@@ -1,0 +1,51 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$primary: #325ae7;
+$secondary: #1b1d2a;
+$grey: #6c757d;
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  "grey": $grey,
+);
+
+$navbar-light-hover-color: $primary;
+$navbar-light-active-color: $primary;
+$nav-underline-link-active-color: $primary;
+$nav-link-hover-color: $primary;
+$nav-underline-gap: 1.7rem;
+$navbar-light-color: #222;
+$nav-pills-border-radius: 0px;
+$nav-pills-link-active-bg: $primary;
+$input-border-radius: 3px;
+$input-border-radius-sm: 3px;
+$input-border-radius-lg: 3px;
+
+$input-box-shadow: 0px;
+$input-focus-box-shadow: 0px;
+$input-focus-border-color: #6c757d;
+
+$form-select-focus-border-color: #6c757d;
+$form-select-focus-width: $input-focus-width;
+$form-select-focus-box-shadow: 0px;
+
+$form-check-input-focus-box-shadow: 0px;
+
+$form-label-font-weight: 500;
+
+$btn-border-radius: 3px;
+$btn-border-radius-sm: 3px;
+$btn-border-radius-lg: 3px;
+
+$form-check-input-border-radius: 3px;
+
+$dropdown-border-radius: 4px;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
