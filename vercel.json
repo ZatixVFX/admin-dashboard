@@ -8,7 +8,7 @@
     },
     {
       "src": "package.json",
-      "use": "@vercel/node"
+      "use": "@vercel/static"
     },
     {
       "src": "src/**/*",
