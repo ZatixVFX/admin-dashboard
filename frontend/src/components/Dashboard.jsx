@@ -231,7 +231,7 @@ const Dashboard = () => {
       </Container>
     </section>
   ) : (
-    <Navigate to="/" />
+    <Navigate to="/login" replace />
   );
 };
 
