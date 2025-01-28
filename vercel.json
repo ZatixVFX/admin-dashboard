@@ -1,0 +1,10 @@
+{
+  "installCommand": "npm install --legcay-peer-deps",
+  "version": 2,
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "admin-dashboard",
+  "version": "1.0.0",
+  "description": "Admin Dashboard Demo",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "client": "npm run dev --prefix ../frontend",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm install --prefix frontend && npm run build --prefix frontend && npm install"
+  },
+  "keywords": [],
+  "author": "Junaid Salie",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-async-handler": "^1.2.0",
+    "json-server": "^1.0.0-beta.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "nodemon": "^3.1.9"
+  }
+}
