@@ -7,11 +7,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "client": "npm run dev --prefix frontend",
+    "client": "npm run dev --prefix ../frontend",
     "server": "nodemon server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "post-production": "npm run server && npm run preview --prefix frontend",
-    "production": "npm install && npm install --prefix frontend && npm run build --prefix frontend && npm run server"
+    "post-production": "npm run server && npm run preview --prefix ../frontend",
+    "production": "npm install && npm install --prefix ../frontend && npm run build --prefix ../frontend && npm run server"
   },
   "keywords": [],
   "author": "Junaid Salie",
