@@ -7,24 +7,24 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-backend/vercel.json
+/vercel.json
 
 # Node Modules
 frontend/node_modules
-backend/node_modules
+node_modules
 
 # Dist
 frontend/dist
-backend/dist
+dist
 
 # Env file
 frontend/.env
 frontend/.env.local
 frontend/.env.*.local
 
-backend/.env
-backend/.env.local
-backend/.env.*.local
+.env
+.env.local
+.env.*.local
 
 dist-ssr
 *.local
