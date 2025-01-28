@@ -25,6 +25,10 @@ const { userInfo } = store.getState().auth;
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
+      <Route
+        path="/"
+        element={<Navigate to={userInfo ? "/dashboards" : "/login"} />}
+      />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="" element={<Dashboard />}>
