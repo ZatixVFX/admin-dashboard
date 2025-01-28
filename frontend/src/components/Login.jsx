@@ -34,12 +34,19 @@ const Login = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    try {
-      const res = await login({ email, password }).unwrap();
-      dispatch(setCredentials({ ...res }));
-    } catch (err) {
-      toast.error(err?.data?.message || err.error);
-      // console.log(err?.data?.message || err.error);
+
+    if (!email) {
+      toast.error("Please fill in your email");
+    } else if (!password) {
+      toast.error("Please fill in your password");
+    } else {
+      try {
+        const res = await login({ email, password }).unwrap();
+        dispatch(setCredentials({ ...res }));
+      } catch (err) {
+        toast.error(err?.data?.message || err.error);
+        // console.log(err?.data?.message || err.error);
+      }
     }
   };
 

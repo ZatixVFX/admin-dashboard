@@ -13,7 +13,6 @@ import store from "./store.js";
 import App from "./App.jsx";
 import Login from "./components/Login.jsx";
 import Register from "./components/Register.jsx";
-import PrivateRoute from "./components/PrivateRoute.jsx";
 import Dashboard from "./components/Dashboard.jsx";
 import Dashboards from "./components/Dashboards.jsx";
 import UserProfile from "./components/UserProfile.jsx";

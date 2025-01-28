@@ -6,7 +6,12 @@ import "./App.css";
 import "./bootstrap.min.css";
 
 function App() {
-  return <Outlet />;
+  return (
+    <>
+      <ToastContainer />
+      <Outlet />
+    </>
+  );
 }
 
 export default App;

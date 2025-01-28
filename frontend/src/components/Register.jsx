@@ -12,7 +12,7 @@ import Alert from "react-bootstrap/Alert";
 import { useRegisterMutation } from "../slices/usersApiSlice";
 import { setCredentials } from "../slices/authSlice";
 
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 
 import LogoLight from "../assets/ArtboardLight.svg";
 import LogoDark from "../assets/ArtboardDark.svg";
@@ -79,7 +79,6 @@ const Register = () => {
   return (
     <>
       <section>
-        <ToastContainer />
         <Container fluid>
           <Row>
             <Col lg={4} className="bg-secondary d-lg-block d-none">
