@@ -10,8 +10,8 @@
     "client": "npm run dev --prefix ../frontend",
     "server": "nodemon server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "post-production": "npm run server && npm run preview --prefix ../frontend",
-    "production": "npm install && npm install --prefix ../frontend && npm run build --prefix ../frontend && npm run server"
+    "post-production": "npm install && npm install ../frontend",
+    "production": "npm run build --prefix ../frontend && npm run server"
   },
   "keywords": [],
   "author": "Junaid Salie",
