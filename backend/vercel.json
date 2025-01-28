@@ -3,12 +3,8 @@
   "version": 2,
   "builds": [
     {
-      "src": "server.js",
+      "src": "install.js",
       "use": "@vercel/node"
-    },
-    {
-      "src": "package.json",
-      "use": "@vercel/static"
     },
     {
       "src": "src/**/*",
