@@ -27,15 +27,17 @@ console.log(userInfo);
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route index={true} path="/login" element={<Login />} />
+      <Route
+        path="/"
+        element={<Navigate to={userInfo ? "/dashboards" : "/login"} />}
+      />
+      <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      {userInfo ? (
-        <Route path="" element={<Dashboard />}>
-          <Route path="/dashboards" element={<Dashboards />} />
-          <Route path="/user-profile" element={<UserProfile />} />
-          <Route path="/account-settings" element={<AccountSettings />} />
-        </Route>
-      ) : null}
+      <Route path="" element={<Dashboard />}>
+        <Route path="/dashboards" element={<Dashboards />} />
+        <Route path="/user-profile" element={<UserProfile />} />
+        <Route path="/account-settings" element={<AccountSettings />} />
+      </Route>
     </Route>
   )
 );
