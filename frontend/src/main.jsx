@@ -14,23 +14,29 @@ import App from "./App.jsx";
 import Login from "./components/Login.jsx";
 import Register from "./components/Register.jsx";
 import PrivateRoute from "./components/PrivateRoute.jsx";
+import Dashboard from "./components/Dashboard.jsx";
 import Dashboards from "./components/Dashboards.jsx";
 import UserProfile from "./components/UserProfile.jsx";
 import AccountSettings from "./components/accountSettings/AccountSettings.jsx";
 
 import "./bootstrap.min.css";
 
+const { userInfo } = store.getState().auth;
+
+console.log(userInfo);
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route path="/" element={<Navigate to="/login" />} />
       <Route index={true} path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="" element={<PrivateRoute />}>
-        <Route path="/dashboards" element={<Dashboards />} />
-        <Route path="/user-profile" element={<UserProfile />} />
-        <Route path="/account-settings" element={<AccountSettings />} />
-      </Route>
+      {userInfo ? (
+        <Route path="" element={<Dashboard />}>
+          <Route path="/dashboards" element={<Dashboards />} />
+          <Route path="/user-profile" element={<UserProfile />} />
+          <Route path="/account-settings" element={<AccountSettings />} />
+        </Route>
+      ) : null}
     </Route>
   )
 );
