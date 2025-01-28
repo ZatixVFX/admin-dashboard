@@ -1,7 +1,13 @@
 import React from "react";
 
 import { useRef, useState, useEffect } from "react";
-import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
+import {
+  Navigate,
+  Link,
+  Outlet,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -182,7 +188,8 @@ const Dashboard = () => {
       </Container>
     );
   };
-  return (
+
+  return userInfo ? (
     <section>
       <Container fluid>
         <Row style={{ maxHeight: "100vh", overflowY: "hidden" }}>
@@ -223,6 +230,8 @@ const Dashboard = () => {
         </Row>
       </Container>
     </section>
+  ) : (
+    <Navigate to="/" />
   );
 };
 
