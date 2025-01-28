@@ -55,6 +55,7 @@ const Register = () => {
     } else if (agreedTCS === false) {
       setShowAlert(true);
       setAgreedTCS(false);
+      toast.error("You need to agree to the terms and conditions");
     } else {
       try {
         const res = await register({ name, email, password }).unwrap();
@@ -177,19 +178,7 @@ const Register = () => {
                           label={<TermsConditions />}
                         />
                       </Form.Group>
-                      {showAlert ? (
-                        <Alert
-                          style={{ height: "50px" }}
-                          className="p-0 py-2"
-                          variant="danger"
-                          onClose={() => setShowAlert(false)}
-                          dismissible
-                        >
-                          <p className="p-3 py-2">
-                            You need to agree to the terms and conditions
-                          </p>
-                        </Alert>
-                      ) : null}
+
                       <Button
                         variant="primary"
                         type="submit"
