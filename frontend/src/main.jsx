@@ -22,8 +22,6 @@ import "./bootstrap.min.css";
 
 const { userInfo } = store.getState().auth;
 
-console.log(userInfo);
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
