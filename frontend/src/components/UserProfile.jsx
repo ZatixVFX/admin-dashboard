@@ -58,7 +58,11 @@ const UserProfile = () => {
   }
 
   for (let num = 1; num < 13; num++) {
-    months.push(num);
+    if (num >= 10) {
+      months.push(num);
+    } else {
+      months.push(`0${num}`);
+    }
   }
 
   return (
@@ -377,7 +381,7 @@ const UserProfile = () => {
                         alt="profile-pic"
                         roundedCircle
                       />
-                      <h4>Mark Rafael</h4>
+                      <h4>{userInfo.name}</h4>
                       <h5 className="text-grey fw-normal">Web Developer</h5>
                       <div className="socials fs-5">
                         <Link to="">
