@@ -19,7 +19,6 @@ import Tab from "react-bootstrap/Tab";
 import Image from "react-bootstrap/Image";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import Hamburger from "hamburger-react";
 
 import { useLogoutMutation } from "../slices/usersApiSlice";
 import { logout } from "../slices/authSlice";
@@ -173,9 +172,7 @@ const Dashboard = () => {
           className="mx-2"
           onClick={handleClick}
           style={{ border: "0px", outline: "none" }}
-        >
-          <Hamburger size={25} />
-        </Navbar.Toggle>
+        />
         <Navbar.Collapse id="left-nav">
           <div
             className="bg-secondary"
