@@ -19,6 +19,7 @@ import Tab from "react-bootstrap/Tab";
 import Image from "react-bootstrap/Image";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Hamburger from "hamburger-react";
 
 import { useLogoutMutation } from "../slices/usersApiSlice";
 import { logout } from "../slices/authSlice";
@@ -42,6 +43,7 @@ import {
   DashboardIcon,
   UserIcon,
   GearIcon,
+  PaymentIcon,
 } from "./Icons";
 
 const Dashboard = () => {
@@ -62,7 +64,8 @@ const Dashboard = () => {
 
   const [logoutApiCall] = useLogoutMutation();
 
-  const logoutHandler = async () => {
+  const logoutHandler = async (e) => {
+    e.preventDefault();
     try {
       await logoutApiCall().unwrap();
       dispatch(logout());
@@ -82,7 +85,12 @@ const Dashboard = () => {
       ? setShowContent(!expanded)
       : setShowContent(false);
 
-    const links = ["dashboards", "user-profile", "account-settings"];
+    const links = [
+      "dashboards",
+      "user-profile",
+      "account-settings",
+      "payments",
+    ];
     links.map((link) => {
       const location = getLocation.includes(link);
       return location === true ? setActiveLink(link) : false;
@@ -137,6 +145,19 @@ const Dashboard = () => {
               {!show ? "Account Settings" : null}
             </Nav.Link>
           </Nav.Item>
+          {/* Component in progress */}
+          {/* <Nav.Item>
+            <Nav.Link
+              className={`px-3 ${show ? "text-center" : null}`}
+              onClick={(e) => (!large ? handleClick(e) : null)}
+              as={Link}
+              to="/payments"
+              eventKey="payments"
+            >
+              <PaymentIcon className="fs-5 me-2" />
+              {!show ? "Payments" : null}
+            </Nav.Link>
+          </Nav.Item> */}
           <Nav variant="pills" className="flex-column pt-1">
             <Nav.Item>
               <Nav.Link
@@ -151,7 +172,7 @@ const Dashboard = () => {
               <Nav.Link
                 className={`px-3 ${show ? "text-center" : null}`}
                 as={Link}
-                onClick={logoutHandler}
+                onClick={(e) => logoutHandler(e)}
                 eventKey="logout"
               >
                 <LogoutIcon className="fs-5 me-2" />
@@ -170,9 +191,10 @@ const Dashboard = () => {
         <Navbar.Toggle
           aria-controls="left-nav"
           className="mx-2"
-          onClick={handleClick}
           style={{ border: "0px", outline: "none" }}
-        />
+        >
+          <Hamburger toggle={setExpanded} toggled={expanded} />
+        </Navbar.Toggle>
         <Navbar.Collapse id="left-nav">
           <div
             className="bg-secondary"
@@ -190,7 +212,7 @@ const Dashboard = () => {
     );
   };
 
-  return userInfo ? (
+  return (
     <section>
       <Container fluid>
         <Row style={{ maxHeight: "100vh", overflowY: "hidden" }}>
@@ -231,8 +253,6 @@ const Dashboard = () => {
         </Row>
       </Container>
     </section>
-  ) : (
-    <Navigate to="/login" replace />
   );
 };
 

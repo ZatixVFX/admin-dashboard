@@ -2,6 +2,11 @@ import DashboardIcon from "react-bootstrap-icons/dist/icons/speedometer2";
 import UserIcon from "react-bootstrap-icons/dist/icons/person-circle";
 import GearIcon from "react-bootstrap-icons/dist/icons/gear";
 import PaymentIcon from "react-bootstrap-icons/dist/icons/wallet2";
+import WalletIcon from "react-bootstrap-icons/dist/icons/wallet";
+import PiggyBankIcon from "react-bootstrap-icons/dist/icons/piggy-bank";
+import PricePlansIcon from "react-bootstrap-icons/dist/icons/tags";
+import ReceiptIcon from "react-bootstrap-icons/dist/icons/receipt";
+import CreditCardIcon from "react-bootstrap-icons/dist/icons/credit-card";
 import InboxIcon from "react-bootstrap-icons/dist/icons/chat-left-text";
 import ContactsIcon from "react-bootstrap-icons/dist/icons/person-lines-fill";
 import ProjectsIcon from "react-bootstrap-icons/dist/icons/rocket-takeoff";
@@ -51,6 +56,11 @@ export {
   UserIcon,
   GearIcon,
   PaymentIcon,
+  WalletIcon,
+  PiggyBankIcon,
+  PricePlansIcon,
+  ReceiptIcon,
+  CreditCardIcon,
   InboxIcon,
   ContactsIcon,
   ProjectsIcon,
