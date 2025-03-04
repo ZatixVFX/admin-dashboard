@@ -50,6 +50,7 @@ import RetweetIcon from "react-bootstrap-icons/dist/icons/arrow-repeat";
 import DevicesIcon from "react-bootstrap-icons/dist/icons/pc-display";
 import SmartphoneIcon from "react-bootstrap-icons/dist/icons/phone";
 import PCIcon from "react-bootstrap-icons/dist/icons/pc";
+import DownloadIcon from "react-bootstrap-icons/dist/icons/download";
 
 export {
   DashboardIcon,
@@ -104,4 +105,5 @@ export {
   DevicesIcon,
   SmartphoneIcon,
   PCIcon,
+  DownloadIcon,
 };

@@ -146,7 +146,7 @@ const Dashboard = () => {
             </Nav.Link>
           </Nav.Item>
           {/* Component in progress */}
-          {/* <Nav.Item>
+          <Nav.Item>
             <Nav.Link
               className={`px-3 ${show ? "text-center" : null}`}
               onClick={(e) => (!large ? handleClick(e) : null)}
@@ -157,7 +157,7 @@ const Dashboard = () => {
               <PaymentIcon className="fs-5 me-2" />
               {!show ? "Payments" : null}
             </Nav.Link>
-          </Nav.Item> */}
+          </Nav.Item>
           <Nav variant="pills" className="flex-column pt-1">
             <Nav.Item>
               <Nav.Link
