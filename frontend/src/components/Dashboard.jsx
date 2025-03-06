@@ -44,6 +44,8 @@ import {
   UserIcon,
   GearIcon,
   PaymentIcon,
+  InboxIcon,
+  ContactsIcon,
 } from "./Icons";
 
 const Dashboard = () => {
@@ -90,6 +92,8 @@ const Dashboard = () => {
       "user-profile",
       "account-settings",
       "payments",
+      "inbox",
+      "contacts",
     ];
     links.map((link) => {
       const location = getLocation.includes(link);
@@ -145,7 +149,6 @@ const Dashboard = () => {
               {!show ? "Account Settings" : null}
             </Nav.Link>
           </Nav.Item>
-          {/* Component in progress */}
           <Nav.Item>
             <Nav.Link
               className={`px-3 ${show ? "text-center" : null}`}
@@ -156,6 +159,30 @@ const Dashboard = () => {
             >
               <PaymentIcon className="fs-5 me-2" />
               {!show ? "Payments" : null}
+            </Nav.Link>
+          </Nav.Item>
+          {/* <Nav.Item>
+            <Nav.Link
+              className={`px-3 ${show ? "text-center" : null}`}
+              onClick={(e) => (!large ? handleClick(e) : null)}
+              as={Link}
+              to="/inbox"
+              eventKey="inbox"
+            >
+              <InboxIcon className="fs-5 me-2" />
+              {!show ? "Inbox" : null}
+            </Nav.Link>
+          </Nav.Item> */}
+          <Nav.Item>
+            <Nav.Link
+              className={`px-3 ${show ? "text-center" : null}`}
+              onClick={(e) => (!large ? handleClick(e) : null)}
+              as={Link}
+              to="/contacts"
+              eventKey="contacts"
+            >
+              <ContactsIcon className="fs-5 me-2" />
+              {!show ? "Contacts" : null}
             </Nav.Link>
           </Nav.Item>
           <Nav variant="pills" className="flex-column pt-1">

@@ -312,26 +312,38 @@ const UserProfile = () => {
                             {
                               name: "Jessica Sanders",
                               status: "Online",
+                              gender: "female",
+                              img: "0",
                             },
                             {
                               name: "Anny Smith",
                               status: "Offline",
+                              gender: "female",
+                              img: "1",
                             },
                             {
                               name: "Kyle Williams",
                               status: "Busy",
-                            },
-                            {
-                              name: "Joseph Doe",
-                              status: "Online",
+                              gender: "male",
+                              img: "2",
                             },
                             {
                               name: "John Smith",
                               status: "Busy",
+                              gender: "male",
+                              img: "3",
+                            },
+                            {
+                              name: "Joseph Doe",
+                              status: "Online",
+                              gender: "male",
+                              img: "4",
                             },
                             {
                               name: "David Williams",
                               status: "Offline",
+                              gender: "male",
+                              img: "5",
                             },
                           ].map((acc, index) => (
                             <Col
@@ -341,9 +353,7 @@ const UserProfile = () => {
                               <div
                                 className="friends-status"
                                 style={{
-                                  backgroundImage: `url(https://xsgames.co/randomusers/assets/avatars/${
-                                    index >= 2 ? "male" : "female"
-                                  }/${index}.jpg)`,
+                                  backgroundImage: `url(https://xsgames.co/randomusers/assets/avatars/${acc.gender}/${acc.img}.jpg)`,
                                 }}
                               >
                                 <div

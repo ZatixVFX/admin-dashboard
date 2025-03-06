@@ -18,6 +18,8 @@ import Dashboards from "./components/Dashboards.jsx";
 import UserProfile from "./components/UserProfile.jsx";
 import AccountSettings from "./components/accountSettings/AccountSettings.jsx";
 import Payments from "./components/payments/Payments.jsx";
+import Inbox from "./components/Inbox.jsx";
+import Contacts from "./components/Contacts.jsx";
 
 import "./bootstrap.min.css";
 
@@ -37,7 +39,8 @@ const router = createBrowserRouter(
         <Route path="/user-profile" element={<UserProfile />} />
         <Route path="/account-settings" element={<AccountSettings />} />
         <Route path="/payments" element={<Payments />} />
-        {/* Component in progress */}
+        {/* <Route path="/inbox" element={<Inbox />} /> */}
+        <Route path="/contacts" element={<Contacts />} />
       </Route>
     </Route>
   )

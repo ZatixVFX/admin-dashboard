@@ -51,6 +51,7 @@ import DevicesIcon from "react-bootstrap-icons/dist/icons/pc-display";
 import SmartphoneIcon from "react-bootstrap-icons/dist/icons/phone";
 import PCIcon from "react-bootstrap-icons/dist/icons/pc";
 import DownloadIcon from "react-bootstrap-icons/dist/icons/download";
+import TelephoneIcon from "react-bootstrap-icons/dist/icons/telephone";
 
 export {
   DashboardIcon,
@@ -106,4 +107,5 @@ export {
   SmartphoneIcon,
   PCIcon,
   DownloadIcon,
+  TelephoneIcon,
 };
