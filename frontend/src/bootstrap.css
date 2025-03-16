@@ -1,4 +1,44 @@
 @charset "UTF-8";
+.contributors img:nth-child(1) {
+  left: 0px;
+}
+
+.contributors img:nth-child(2) {
+  left: 20px;
+}
+
+.contributors img:nth-child(3) {
+  left: 40px;
+}
+
+.contributors img:nth-child(4) {
+  left: 60px;
+}
+
+.contributors img:nth-child(5) {
+  left: 80px;
+}
+
+.contributors img:nth-child(6) {
+  left: 100px;
+}
+
+.contributors img:nth-child(7) {
+  left: 120px;
+}
+
+.contributors img:nth-child(8) {
+  left: 140px;
+}
+
+.contributors img:nth-child(9) {
+  left: 160px;
+}
+
+.contributors img:nth-child(10) {
+  left: 180px;
+}
+
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors

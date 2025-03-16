@@ -46,6 +46,7 @@ import {
   PaymentIcon,
   InboxIcon,
   ContactsIcon,
+  ProjectsIcon,
 } from "./Icons";
 
 const Dashboard = () => {
@@ -94,6 +95,7 @@ const Dashboard = () => {
       "payments",
       "inbox",
       "contacts",
+      "projects",
     ];
     links.map((link) => {
       const location = getLocation.includes(link);
@@ -183,6 +185,19 @@ const Dashboard = () => {
             >
               <ContactsIcon className="fs-5 me-2" />
               {!show ? "Contacts" : null}
+            </Nav.Link>
+          </Nav.Item>
+
+          <Nav.Item>
+            <Nav.Link
+              className={`px-3 ${show ? "text-center" : null}`}
+              onClick={(e) => (!large ? handleClick(e) : null)}
+              as={Link}
+              to="/projects"
+              eventKey="projects"
+            >
+              <ProjectsIcon className="fs-5 me-2" />
+              {!show ? "Projects" : null}
             </Nav.Link>
           </Nav.Item>
           <Nav variant="pills" className="flex-column pt-1">

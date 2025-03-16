@@ -8,70 +8,9 @@ import Col from "react-bootstrap/Col";
 
 import { TelephoneIcon, CommentIcon } from "./Icons";
 
-const Contacts = () => {
-  const contactList = [
-    {
-      name: "Jessica Sanders",
-      status: "Online",
-      gender: "female",
-      img: "0",
-      role: "Web developer",
-      accountStatus: "Inactive",
-      location: "Cape Town, South Africa",
-      dateJoined: "05.11.2022",
-    },
-    {
-      name: "Anny Smith",
-      status: "Offline",
-      gender: "female",
-      img: "1",
-      role: "Back end developer",
-      accountStatus: "Active",
-      location: "Milan, Italy",
-      dateJoined: "15.08.2023",
-    },
-    {
-      name: "Kyle Williams",
-      status: "Busy",
-      gender: "male",
-      img: "2",
-      role: "UI & UX designer",
-      accountStatus: "Pending",
-      location: "Barcelona, Spain",
-      dateJoined: "27.09.2024",
-    },
-    {
-      name: "John Smith",
-      status: "Busy",
-      gender: "male",
-      img: "3",
-      role: "Project Manager",
-      accountStatus: "Pending",
-      location: "London, UK",
-      dateJoined: "02.01.2023",
-    },
-    {
-      name: "Joseph Doe",
-      status: "Online",
-      gender: "male",
-      img: "4",
-      role: "Web developer",
-      accountStatus: "Active",
-      location: "New York, USA",
-      dateJoined: "21.12.2024",
-    },
+import db from "../../db.json";
 
-    {
-      name: "David Williams",
-      status: "Offline",
-      gender: "male",
-      img: "5",
-      role: "Back end developer",
-      accountStatus: "Inactive",
-      location: "Johannesburg, South Africa",
-      dateJoined: "03.01.2025",
-    },
-  ];
+const Contacts = () => {
   const ContactCard = ({ data }) => {
     return (
       <Col>
@@ -173,7 +112,7 @@ const Contacts = () => {
         >
           <Tab eventKey="name a-z" title="Name a-z">
             <Row xs={1} className="gy-3">
-              {contactList
+              {db.users
                 .sort((a, b) => a.name.localeCompare(b.name))
                 .map((data, index) => (
                   <ContactCard key={index} data={data} />
@@ -182,7 +121,7 @@ const Contacts = () => {
           </Tab>
           <Tab eventKey="name z-a" title="Name z-a">
             <Row xs={1} className="gy-3">
-              {contactList
+              {db.users
                 .sort((a, b) => b.name.localeCompare(a.name))
                 .map((data, index) => (
                   <ContactCard key={index} data={data} />
@@ -191,7 +130,7 @@ const Contacts = () => {
           </Tab>
           <Tab eventKey="recent" title="Recent">
             <Row xs={1} className="gy-3">
-              {contactList
+              {db.users
                 .sort(
                   (a, b) =>
                     new Date(
@@ -208,7 +147,7 @@ const Contacts = () => {
           </Tab>
           <Tab eventKey="oldest" title="Oldest">
             <Row xs={1} className="gy-3">
-              {contactList
+              {db.users
                 .sort(
                   (a, b) =>
                     new Date(

@@ -1029,3 +1029,28 @@ body {
   margin: auto;
   color: var(--bs-grey);
 }
+
+.card-link {
+  color: var(--bs-primary);
+  text-decoration: none;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+.contributors {
+  position: relative;
+}
+.contributors img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border: 3px solid white;
+}
+
+.project-info p {
+  margin-bottom: 0px;
+}

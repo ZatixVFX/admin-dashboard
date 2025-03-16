@@ -49,4 +49,19 @@ $form-check-input-border-radius: 3px;
 
 $dropdown-border-radius: 4px;
 
+$n: 10;
+
+@for $i from 1 through $n {
+  $value: ($i * 2) * 10;
+  @if $i == 1 {
+    .contributors img:nth-child(1) {
+      left: 0px;
+    }
+  } @else {
+    .contributors img:nth-child(#{$i}) {
+      left: calc($value - 20) + 0px;
+    }
+  }
+}
+
 @import "../node_modules/bootstrap/scss/bootstrap";

@@ -52,6 +52,7 @@ import SmartphoneIcon from "react-bootstrap-icons/dist/icons/phone";
 import PCIcon from "react-bootstrap-icons/dist/icons/pc";
 import DownloadIcon from "react-bootstrap-icons/dist/icons/download";
 import TelephoneIcon from "react-bootstrap-icons/dist/icons/telephone";
+import ArrowLeftIcon from "react-bootstrap-icons/dist/icons/arrow-left";
 
 export {
   DashboardIcon,
@@ -108,4 +109,5 @@ export {
   PCIcon,
   DownloadIcon,
   TelephoneIcon,
+  ArrowLeftIcon,
 };
