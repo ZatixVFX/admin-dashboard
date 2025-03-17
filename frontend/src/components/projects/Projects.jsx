@@ -66,12 +66,7 @@ export const ProjectCard = ({ projects }) => {
               </Card>
             ) : (
               <Card style={{ height: "100%", width: "100%" }}>
-                <Card.Img
-                  variant="top"
-                  src={data.img}
-                  height={200}
-                  style={{}}
-                />
+                <Card.Img variant="top" src={img.src} height={200} style={{}} />
                 <Card.ImgOverlay
                   style={{
                     left: "auto",
