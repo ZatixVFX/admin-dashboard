@@ -106,9 +106,12 @@ const Register = () => {
                 </Col>
               </Row>
             </Col>
-            <Col className="text-center">
-              <Row xs={1} style={{ minHeight: "650px" }}>
-                <Col className="text-end p-4 px-sm-5 px-4">
+            <Col
+              className="text-center"
+              style={{ overflowY: "scroll", maxHeight: "100vh" }}
+            >
+              <Row xs={1}>
+                <Col className="text-end pt-4 pb-1 px-sm-5 px-4">
                   <p>
                     {"Already have an account? "}
                     <Link
@@ -126,7 +129,7 @@ const Register = () => {
                       alt="Logo"
                       style={{ width: "auto", height: "25px" }}
                     />
-                    <h3 className="py-4">Sign up to Artboard</h3>
+                    <h3 className="py-4 mb-0">Sign up to Artboard</h3>
                     <Form onSubmit={submitHandler} className="pb-3 text-start">
                       <Form.Group className="mb-3" controlId="name">
                         <Form.Label>What should we call you?</Form.Label>

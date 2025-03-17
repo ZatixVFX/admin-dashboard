@@ -23,7 +23,8 @@ const Profile = () => {
 
   const [logoutApiCall] = useLogoutMutation();
 
-  const logoutHandler = async () => {
+  const logoutHandler = async (e) => {
+    e.preventDefault();
     try {
       await logoutApiCall().unwrap();
       dispatch(logout());
@@ -96,7 +97,7 @@ const Profile = () => {
           </Container>
         </Link>
         <Link
-          onClick={logoutHandler}
+          onClick={(e) => logoutHandler(e)}
           className="dropdown-item profile-item d-flex px-3 pt-3"
         >
           <LogoutIcon className="fs-5" />

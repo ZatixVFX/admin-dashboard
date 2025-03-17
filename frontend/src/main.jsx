@@ -23,6 +23,7 @@ import Inbox from "./components/Inbox.jsx";
 import Contacts from "./components/Contacts.jsx";
 import Projects from "./components/projects/Projects.jsx";
 import Project from "./components/projects/Project.jsx";
+import OnBoarding from "./components/onboarding/OnBoarding.jsx";
 
 import "./bootstrap.min.css";
 
@@ -68,6 +69,10 @@ const router = createBrowserRouter(
           ))}
         </Route>
       </Route>
+      <Route
+        path="/onboarding"
+        element={userInfo ? <OnBoarding /> : <Navigate to="/login" />}
+      />
     </Route>
   )
 );
