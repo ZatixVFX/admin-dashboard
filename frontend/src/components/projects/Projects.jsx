@@ -163,13 +163,17 @@ const Projects = ({ projects }) => {
 
   useEffect(() => {
     setSearchParam({ page: current });
-    const cachedArray = async (projectsArray) => {
+    const fetchImages = async (projectsArray) => {
+      setArr(projectsArray.slice(size * current - size, size * current));
+      setImgLoaded(false);
+
       const promises = await projectsArray.map((data) => {
         return new Promise((resolve, reject) => {
           const img = new Image();
-          img.onload = () => resolve();
-          img.onerror = () => reject();
+          img.fetchPriority = "high";
           img.src = data.img;
+          img.onload = () => resolve(data.img);
+          img.onerror = () => reject(img);
         });
       });
       await Promise.all(promises);
@@ -178,7 +182,7 @@ const Projects = ({ projects }) => {
 
       setImgLoaded(true);
     };
-    cachedArray(projects);
+    fetchImages(projects);
   }, [setSearchParam, projects, current, size]);
 
   // let projectCards = ;
