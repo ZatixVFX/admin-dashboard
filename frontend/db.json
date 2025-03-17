@@ -61,5 +61,70 @@
       "location": "Johannesburg, South Africa",
       "dateJoined": "03.01.2025"
     }
+  ],
+  "projects": [
+    {
+      "name": "Nexora",
+      "img": "https://images.unsplash.com/photo-1673386582281-98941bd6c37c",
+      "status": "In progress",
+      "dueDate": "10.08.2024",
+      "dateStarted": "22.01.2024"
+    },
+    {
+      "name": "Veltric",
+      "img": "https://images.unsplash.com/photo-1620987278429-ab178d6eb547",
+      "status": "Planned",
+      "dueDate": "15.10.2022",
+      "dateStarted": "20.09.2022"
+    },
+    {
+      "name": "Quantis",
+      "img": "https://images.unsplash.com/photo-1632201717104-b7c59bc026ee",
+      "status": "Future",
+      "dueDate": "10.01.2024",
+      "dateStarted": "05.10.2023"
+    },
+    {
+      "name": "Xyberis",
+      "img": "https://images.unsplash.com/photo-1644251966592-64ea9643d803",
+      "status": "Finished",
+      "dueDate": "20.01.2024",
+      "dateStarted": "15.11.2023"
+    },
+    {
+      "name": "Zyvon",
+      "img": "https://images.unsplash.com/photo-1627021849821-2415df5ec6ed",
+      "status": "In progress",
+      "dueDate": "20.10.2022",
+      "dateStarted": "18.08.2022"
+    },
+    {
+      "name": "Trovic",
+      "img": "https://images.unsplash.com/photo-1676022763096-a1ad12b2e370",
+      "status": "Future",
+      "dueDate": "18.12.2023",
+      "dateStarted": "20.10.2023"
+    },
+    {
+      "name": "Blyze",
+      "img": "https://images.unsplash.com/photo-1698935958560-2891be2d84c8",
+      "status": "Finished",
+      "dueDate": "10.12.2022",
+      "dateStarted": "05.09.2022"
+    },
+    {
+      "name": "Orba",
+      "img": "https://images.unsplash.com/photo-1664262283662-40cc80a2cb6e",
+      "status": "Planned",
+      "dueDate": "10.08.2024",
+      "dateStarted": "21.07.2024"
+    },
+    {
+      "name": "Trovic",
+      "img": "https://lc.cx/8u0IjN",
+      "status": "Future",
+      "dueDate": "11.09.2022",
+      "dateStarted": "25.07.2022"
+    }
   ]
 }

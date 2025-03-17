@@ -12,6 +12,7 @@ import { ArrowLeftIcon } from "../Icons";
 
 const Project = ({ name, img, status, dateDue, dateStarted, projects }) => {
   const navigate = useNavigate();
+  const recentProjects = [...projects];
   let dateRegex = /(\d{2})\.(\d{2})\.(\d{4})/;
   let datePattern = "$3-$2-$1";
   return (
@@ -79,7 +80,7 @@ const Project = ({ name, img, status, dateDue, dateStarted, projects }) => {
       </Row>
       <h4 className="my-4">Recent Projects</h4>
       <ProjectCard
-        projects={projects
+        projects={recentProjects
           .sort(
             (a, b) =>
               new Date(

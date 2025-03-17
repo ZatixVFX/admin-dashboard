@@ -167,9 +167,9 @@ const Projects = ({ projects }) => {
       const promises = await projectsArray.map((data) => {
         return new Promise((resolve, reject) => {
           const img = new Image();
-          img.src = data.img;
           img.onload = () => resolve();
           img.onerror = () => reject();
+          img.src = data.img;
         });
       });
       await Promise.all(promises);
@@ -207,7 +207,6 @@ const Projects = ({ projects }) => {
               style={{ color: "var(--bs-gray-800)" }}
               onClick={() => {
                 setCurrent(current + 1);
-                setSearchParam({ page: current });
               }}
             >
               Next
@@ -220,7 +219,6 @@ const Projects = ({ projects }) => {
               style={{ color: "var(--bs-gray-800)" }}
               onClick={() => {
                 setCurrent(current - 1);
-                setSearchParam({ page: current });
               }}
             >
               Previous
