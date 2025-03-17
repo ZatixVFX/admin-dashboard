@@ -88,6 +88,7 @@ const Project = ({ name, img, status, dateDue, dateStarted, projects }) => {
               new Date(a.dateStarted.replace(dateRegex, datePattern)).getTime()
           )
           .slice(0, 3)}
+        imgLoaded={true}
       />
       <div className="mb-4"></div>
     </Container>

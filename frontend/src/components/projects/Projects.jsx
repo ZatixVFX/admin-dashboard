@@ -11,24 +11,38 @@ import Placeholder from "react-bootstrap/Placeholder";
 import ProjectImg from "../../assets/projects/Quantum-Stride.png";
 import PlaceholderImg from "../../assets/placeholder.png";
 
-export const ProjectCard = ({ projects }) => {
-  const [imgLoaded, setImgLoaded] = useState(false);
-  // useEffect(() => {
-  //   const img = new Image();
-  //   img.onLoad = () => {
-  //     setImgLoaded(true);
-  //   };
-  //   img.src = projects.img;
-  // });
+export const ProjectCard = ({ projects, imgLoaded }) => {
+  //   const [imgLoaded, setImgLoaded] = useState(false);
+  //   const [arr, setArr] = useState(new Array(6).fill());
+  //   // useEffect(() => {
+  //   //   const img = new Image();
+  //   //   img.onLoad = () => {
+  //   //     setImgLoaded(true);
+  //   //   };
+  //   //   img.src = projects.img;
+  //   // });
+
+  //   useEffect(() => {
+  //     const cachedArray = async (arr) => {
+  //       const promises = await arr.map((data) => {
+  //         return new Promise((resolve, reject) => {
+  //           const img = new Image();
+  //           img.src = data.img;
+  //           img.onload = () => resolve();
+  //           img.onerror = () => reject();
+  //         });
+  //       });
+  //       await Promise.all(promises);
+  //       setArr([...arr]);
+
+  //       setImgLoaded(true);
+  //     };
+  //     cachedArray(projects);
+  //   }, [projects]);
+
   return (
     <Row md={3} sm={2} xs={1} className="gy-3">
       {projects.map((data, index) => {
-        const img = new Image();
-        img.onload = () => {
-          setImgLoaded(true);
-        };
-        img.src = data.img;
-
         return (
           <Col key={`item-${index}`} className="px-1">
             {!imgLoaded ? (
@@ -66,7 +80,12 @@ export const ProjectCard = ({ projects }) => {
               </Card>
             ) : (
               <Card style={{ height: "100%", width: "100%" }}>
-                <Card.Img variant="top" src={img.src} height={200} style={{}} />
+                <Card.Img
+                  variant="top"
+                  src={data.img}
+                  height={200}
+                  style={{}}
+                />
                 <Card.ImgOverlay
                   style={{
                     left: "auto",
@@ -137,11 +156,30 @@ const Projects = ({ projects }) => {
   const [searchParam, setSearchParam] = useSearchParams();
   const [current, setCurrent] = useState(Number(searchParam.get("page")) || 1);
   let size = 6;
-  const [arr, setArr] = useState(projects);
+  const [arr, setArr] = useState(
+    projects.slice(size * current - size, size * current)
+  );
+  const [imgLoaded, setImgLoaded] = useState(false);
 
   useEffect(() => {
     setSearchParam({ page: current });
-  }, [setSearchParam, current]);
+    const cachedArray = async (projectsArray) => {
+      const promises = await projectsArray.map((data) => {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.src = data.img;
+          img.onload = () => resolve();
+          img.onerror = () => reject();
+        });
+      });
+      await Promise.all(promises);
+
+      setArr(projectsArray.slice(size * current - size, size * current));
+
+      setImgLoaded(true);
+    };
+    cachedArray(projects);
+  }, [setSearchParam, projects, current, size]);
 
   // let projectCards = ;
   // console.log(projectCards);
@@ -160,9 +198,7 @@ const Projects = ({ projects }) => {
         className="p-3 px-lg-5 py-5"
         style={{ backgroundColor: "var(--bs-gray-200)" }}
       >
-        <ProjectCard
-          projects={projects.slice(size * current - size, size * current)}
-        />
+        <ProjectCard projects={arr} imgLoaded={imgLoaded} />
         <Container className="text-center pt-5 pb-0">
           {projects.slice(size * (current + 1) - size, size * (current + 1))
             .length === 0 ? null : (
