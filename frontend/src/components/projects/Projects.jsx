@@ -80,15 +80,11 @@ export const ProjectCard = ({ projects, imgLoaded }) => {
               </Card>
             ) : (
               <Card style={{ height: "100%", width: "100%" }}>
-                <Card.Img
-                  variant="top"
-                  src={data.img}
-                  height={200}
-                  style={{}}
-                />
+                <Card.Img variant="top" src={data.img} height={200} />
                 <Card.ImgOverlay
                   style={{
                     left: "auto",
+                    height: "0px",
                   }}
                 >
                   <h6 className="status text-primary bg-white p-1">
@@ -172,8 +168,8 @@ const Projects = ({ projects }) => {
           const img = new Image();
           img.fetchPriority = "high";
           img.src = data.img;
-          img.onload = () => resolve(data.img);
-          img.onerror = () => reject(img);
+          img.onload = () => resolve();
+          img.onerror = () => reject();
         });
       });
       await Promise.all(promises);
