@@ -65,14 +65,14 @@
   "projects": [
     {
       "name": "Nexora",
-      "img": "https://unsplash.com/photos/lH1CACE-Fd8/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzQyMjI2OTU2fA&force=true&w=640",
+      "img": "https://images.unsplash.com/photo-1673386582281-98941bd6c37c?fm=jpg&q=60&w=640",
       "status": "In progress",
       "dueDate": "10.08.2024",
       "dateStarted": "22.01.2024"
     },
     {
       "name": "Veltric",
-      "img": "https://unsplash.com/photos/6W8H4puOJB0/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzQyMjIzOTcxfA&force=true&w=640",
+      "img": "https://images.unsplash.com/photo-1620987278429-ab178d6eb547?q=80&w=640",
       "status": "Planned",
       "dueDate": "15.10.2022",
       "dateStarted": "20.09.2022"
@@ -121,7 +121,7 @@
     },
     {
       "name": "Voro",
-      "img": "https://unsplash.com/photos/YkCG2OrEPEw/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzQyMjI3NjE5fA&force=true&w=640",
+      "img": "https://images.unsplash.com/photo-1679768116177-809cf732bd6d?fm=jpg&q=60&w=640",
       "status": "Future",
       "dueDate": "11.09.2022",
       "dateStarted": "25.07.2022"

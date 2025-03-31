@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 /* Chrome, Edge and Safari */
 *::-webkit-scrollbar {
   height: 8px;
@@ -1053,4 +1054,93 @@ body {
 
 .project-info p {
   margin-bottom: 0px;
+}
+
+.steps .nav-link {
+  color: white !important;
+}
+
+.steps .nav-link .sub-header {
+  color: var(--bs-gray-700);
+}
+
+.steps .nav-item:hover .sub-header {
+  color: var(--bs-gray-500);
+}
+
+.steps .nav-link.active .sub-header {
+  color: white;
+}
+
+.steps .nav-link::before {
+  display: inline-block;
+  content: "\f28a";
+  font-family: bootstrap-icons !important;
+  color: var(--bs-gray-700);
+  font-style: normal;
+  font-weight: 400 !important;
+  font-variant: normal;
+  text-transform: none;
+  width: 19px;
+  height: 19px;
+  border-radius: 100%;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-size: 20px;
+}
+
+.steps .nav-link.active::before {
+  color: var(--bs-primary);
+}
+
+.steps .nav-link.checked::before {
+  content: "\F26A";
+  color: var(--bs-primary);
+  background-color: white;
+}
+
+.steps .nav-link::after {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .steps .nav-link::after {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="590" height="850" viewBox="0 0 40 33" transform="matrix(0 1 1 0 0 0)"><path d="M33 1H2v-1h30z" fill="%23343a40"/></svg>');
+    background-size: cover;
+    background-color: transparent;
+  }
+}
+
+.steps .nav-link[data-rr-ui-event-key="step-5"]::after {
+  background-image: none;
+}
+
+.account-type {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.account-type p {
+  margin-bottom: 0px;
+}
+
+.account-type .btn {
+  border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color);
+}
+
+.account-type .btn div {
+  pointer-events: none;
+}
+
+.account-type .btn:hover {
+  border-color: var(--bs-gray-700);
+}
+
+.account-type .btn.active {
+  border-color: var(--bs-primary);
 }

@@ -96,7 +96,6 @@ const Dashboard = () => {
       "inbox",
       "contacts",
       "projects",
-      "onboarding",
     ];
     links.map((link) => {
       const location = getLocation.includes(link);
@@ -201,7 +200,7 @@ const Dashboard = () => {
               {!show ? "Projects" : null}
             </Nav.Link>
           </Nav.Item>
-          {/* <Nav.Item>
+          <Nav.Item>
             <Nav.Link
               className={`px-3 ${show ? "text-center" : null}`}
               onClick={(e) => (!large ? handleClick(e) : null)}
@@ -212,7 +211,7 @@ const Dashboard = () => {
               <ProjectsIcon className="fs-5 me-2" />
               {!show ? "Onboarding" : null}
             </Nav.Link>
-          </Nav.Item> */}
+          </Nav.Item>
           <Nav variant="pills" className="flex-column pt-1">
             <Nav.Item>
               <Nav.Link

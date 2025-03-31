@@ -53,6 +53,9 @@ import PCIcon from "react-bootstrap-icons/dist/icons/pc";
 import DownloadIcon from "react-bootstrap-icons/dist/icons/download";
 import TelephoneIcon from "react-bootstrap-icons/dist/icons/telephone";
 import ArrowLeftIcon from "react-bootstrap-icons/dist/icons/arrow-left";
+import CircleIcon from "react-bootstrap-icons/dist/icons/circle";
+import CheckCircleIcon from "react-bootstrap-icons/dist/icons/check-circle-fill";
+import AdminIcon from "react-bootstrap-icons/dist/icons/person-lock";
 
 export {
   DashboardIcon,
@@ -110,4 +113,7 @@ export {
   DownloadIcon,
   TelephoneIcon,
   ArrowLeftIcon,
+  CircleIcon,
+  CheckCircleIcon,
+  AdminIcon,
 };
